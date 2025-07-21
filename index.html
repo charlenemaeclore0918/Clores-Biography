@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Biography Clores</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    #bio-section {
+      display: none;
+      transition: all 0.3s ease;
+    }
+    #show-bio {
+      display: inline-block;
+      margin: 20px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #007bff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="toggle-mode">🌙 Dark Mode</button>
+
+  <div class="header-container">
+    <label for="upload" class="profile-wrapper">
+      <img id="profile-pic" class="profile" src="42d0499e-fa73-4474-8bee-ed26e518afc2.jpg" alt="Profile Picture">
+      <input type="file" id="upload" accept="image/*" hidden>
+    </label>
+    <h2 class="username">Charlene Mae A. Clores</h2>
+    <h1>My Auto Biography</h1>
+  </div>
+
+
+  <a id="show-bio">😊Click here to view my biography</a>
+
+  <div class="bio" id="bio-section">
+    <p>
+    ✨ My Autobiography <br>
+    Hi! I’m Charlene Mae A. Clores, an IT student at Datamex College in Meycauayan, Bulacan. 
+    I’m passionate about technology and love spending my free time watching anime, K-dramas, 
+    C-dramas, and J-dramas. I’m also a big fan of K-pop and P-pop idols. I enjoy learning 
+    new things and expressing my creativity through my interests. <br><br> 
+
+    👧 My Early Life <br>
+    I was born in Cabanatuan City and raised in Quezon City. Growing up, I’ve always been 
+    curious and imaginative. I loved playing games, exploring new hobbies, and bonding with 
+    my family. My childhood was filled with simple joys that shaped who I am today. <br><br> 
+        
+    📚 My Education <br>
+    I am currently studying Information Technology at Datamex College. I chose this course 
+    because I’m interested in how technology works, especially computers and programming. 
+    It’s challenging, but I enjoy solving problems and building things from scratch.<br><br>
+
+    💖 My Hobbies and Interests <br>
+    In my free time, I love watching anime and dramas from different countries - 
+    each story inspires me in different ways. I also support K-pop and P-pop groups 
+    because their talent, visuals, and passion really motivate me to keep going. 
+    These interests help me express myself and relax after a long day.<br><br>
+
+    🌱 My Dreams and Goals <br>
+    In the future, I hope to become a skilled IT professional. I want to create 
+    something meaningful through technology - maybe an app or a website that can help others. 
+    I also dream of traveling, discovering new cultures, and continuing to grow as a person.<br><br>
+    </p>
+
+    <h2>💖 Things I Love</h2>
+    <ul class="hobbies">
+      <li><i class="fa-solid fa-laptop-code"></i> Coding</li>
+      <li><i class="fa-solid fa-film"></i> Movies</li>
+      <li><i class="fa-solid fa-music"></i> K-Pop</li>
+      <li><i class="fa-solid fa-tv"></i> K-Dramas</li>
+      <li><i class="fa-solid fa-icons"></i> Anime</li>
+    </ul>
+  </div>
+
+  <script>
+    
+    document.getElementById('show-bio').addEventListener('click', function() {
+      const bio = document.getElementById('bio-section');
+      bio.style.display = bio.style.display === 'none' || bio.style.display === '' ? 'block' : 'none';
+      this.textContent = bio.style.display === 'block' ? 'Hide biography' : 'Click here to view my biography';
+    });
+  </script>
+
+</body>
+</html>
+

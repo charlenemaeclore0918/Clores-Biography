@@ -1,0 +1,143 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --accent-color: #007BFF;
+  --card-bg: #ffffff;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --accent-color: #00bfff;
+  --card-bg: #2c2c2c;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 2rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#toggle-mode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.header-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.profile-wrapper {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.profile {
+ width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  object-fit: cover;
+  object-position: center 80%; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-wrapper:hover .profile {
+  transform: scale(2.05);
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.9);
+}
+
+.username {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.header-container h1 {
+  font-size: 2.2rem;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.bio {
+  max-width: 850px;
+  margin: 40px auto;
+  background-color: var(--card-bg);
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+  text-align: left;
+  border-left: 8px solid var(--accent-color);
+}
+.bio .section {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 36px;
+}
+
+.bio .section::before {
+  content: "📝";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+}
+
+.bio .section:nth-of-type(2)::before { content: "👧"; }
+.bio .section:nth-of-type(3)::before { content: "📚"; }
+.bio .section:nth-of-type(4)::before { content: "💖"; }
+.bio .section:nth-of-type(5)::before { content: "🌱"; }
+
+.bio h2 {
+  font-size: 22px;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}  
+
+.hobbies {
+ list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hobbies li {
+  background: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.hobbies i {
+  margin-right: 10px;
+  color: var(--accent-color);
+}
